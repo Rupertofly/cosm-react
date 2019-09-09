@@ -1,0 +1,18 @@
+{
+  "name": "cosm-react",
+  "version": "0.1.0",
+  "description": "cosmos react svg project",
+  "main": "src/index.ts",
+  "repository": "git@github.com:Rupertofly/cosm-react.git",
+  "author": "Ruby Quail",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "parcel src/index.html --port=8080"
+  },
+  "private": false,
+  "devDependencies": {
+    "@types/webpack": "^4.39.1",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.6.2"
+  }
+}
