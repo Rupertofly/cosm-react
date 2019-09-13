@@ -1,5 +1,25 @@
 import { select, range, interpolateCubehelixDefault } from 'd3';
+import { render } from 'react-dom';
+import { createElement } from 'react';
 
+const TAU = 2 * Math.PI;
+const $ = (ca: string) => document.querySelector(ca)!;
+(() => {
+  const r = (time: number) => {
+    render(
+      createElement(
+        'div',
+        {},
+        createElement('button', {}, (time / 1000).toFixed(2)),
+        createElement('p', {}, String(32))
+      ),
+      $('body')
+    );
+
+    requestAnimationFrame(r);
+  };
+  requestAnimationFrame(r);
+})();
 (() => {
   let count = 0;
   let cv: HTMLElement = document.getElementById('base-div')!;
