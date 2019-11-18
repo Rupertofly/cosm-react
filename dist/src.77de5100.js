@@ -36884,44 +36884,6 @@ if (!_mobx.observable) throw new Error("mobx-react requires mobx to be available
 },{"react-dom":"../node_modules/react-dom/index.js","mobx-react-lite":"../node_modules/mobx-react-lite/dist/index.module.js","react":"../node_modules/react/index.js","mobx":"../node_modules/mobx/lib/mobx.module.js"}],"app.tsx":[function(require,module,exports) {
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var __extends = this && this.__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
-      __proto__: []
-    } instanceof Array && function (d, b) {
-      d.__proto__ = b;
-    } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
-    };
-
-    return _extendStatics(d, b);
-  };
-
-  return function (d, b) {
-    _extendStatics(d, b);
-
-    function __() {
-      this.constructor = d;
-    }
-
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-  };
-}();
-
-var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-      d;
-  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-  }
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
 var __importStar = this && this.__importStar || function (mod) {
   if (mod && mod.__esModule) return mod;
   var result = {};
@@ -36940,34 +36902,10 @@ var mobx_react_1 = require("mobx-react");
 
 var React = __importStar(require("react"));
 
-var App =
-/** @class */
-function (_super) {
-  __extends(App, _super);
-
-  function App() {
-    return _super !== null && _super.apply(this, arguments) || this;
-  }
-
-  App.prototype.render = function () {
-    return React.createElement("svg", {
-      viewBox: "-1 -1 2 2",
-      width: "100",
-      height: "100"
-    }, React.createElement("rect", {
-      x: "0",
-      y: "0",
-      width: "2",
-      height: "0.5"
-    }));
-  };
-
-  App = __decorate([mobx_react_1.observer], App);
-  return App;
-}(React.Component);
-
-exports.App = App;
-exports.default = App;
+exports.App = mobx_react_1.observer(function () {
+  return React.createElement("h1", null, "hey boy");
+});
+exports.default = exports.App;
 },{"mobx-react":"../node_modules/mobx-react/dist/mobx-react.module.js","react":"../node_modules/react/index.js"}],"index.ts":[function(require,module,exports) {
 "use strict";
 
