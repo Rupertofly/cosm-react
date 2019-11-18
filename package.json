@@ -22,6 +22,7 @@
     "@type-config/react": "^1.0.1",
     "d3": "^5.12.0",
     "mobx": "^5.15.0",
+    "mobx-react": "^6.1.4",
     "parcel": "^1.12.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
